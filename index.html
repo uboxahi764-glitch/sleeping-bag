@@ -1,0 +1,198 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onchain Call Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .gradient-bg { background: linear-gradient(135deg,#0f172a 0%,#0ea5a4 100%); }
+    .glass { backdrop-filter: blur(6px); background: rgba(255,255,255,0.05); }
+  </style>
+</head>
+<body class="antialiased text-gray-100 gradient-bg min-h-screen flex flex-col">
+  
+  <!-- HEADER -->
+  <header class="p-4 sm:p-6 flex items-center justify-between bg-gray-900/40 glass sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-300 to-cyan-500 rounded-lg flex items-center justify-center font-bold text-gray-900"></div>
+      <span class="font-semibold text-2xl sm:text-4xl">Onchain</span>
+    </div>
+    <a href="tel:+12027805987" class="px-6 py-3 bg-teal-400 text-teal-900 font-bold rounded-xl shadow hover:bg-teal-300 transition text-sm sm:text-base">
+      📞 Call Now +1(202) 780-5987
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="flex-1 flex items-center justify-center text-center px-4 sm:px-6 py-12 sm:py-20">
+    <div class="max-w-2xl">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"> Onchain Help Connect Instantly.<br class="hidden sm:block">One Tap to Call.</h1>
+      <p class="mt-4 text-gray-200 text-base sm:text-lg">Skip the waiting — just tap below and start your call instantly with our secure line.</p>
+      <div class="mt-8">
+        <a href="tel:+12027805987" class="w-full sm:w-auto block px-12 py-6 bg-teal-400 text-teal-900 text-2xl font-extrabold rounded-2xl shadow-2xl hover:bg-teal-300 transition transform hover:scale-105">📞 +1(202) 780-5987</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-300">
+        <div class="p-4 bg-gray-900/40 rounded-lg">⚡ Instant connection</div>
+        <div class="p-4 bg-gray-900/40 rounded-lg">🔒 Secure line</div>
+        <div class="p-4 bg-gray-900/40 rounded-lg">💡 24/7 Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 px-6 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold">About Our Call Service</h2>
+      <p class="mt-4 text-gray-400 text-sm sm:text-base">
+        We are here to help — instantly, simply, and reliably.
+        With Onchain’s, our users can connect with you in just one tap — no barriers, no noise, only clear and effective communication.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center">FAQ</h2>
+      <div class="mt-6 space-y-4 text-gray-300">
+        <details class="bg-gray-800 p-4 rounded">
+          <summary class="font-semibold">Is this service free?</summary>
+          <p class="mt-2 text-sm">Yes, calling through this page is free from our side, though carrier charges may apply.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded">
+          <summary class="font-semibold">Can I call from outside my country?</summary>
+          <p class="mt-2 text-sm">Yes, international users can also connect directly. Ensure you use the correct country code.</p>
+        </details>
+        <details class="bg-gray-800 p-4 rounded">
+          <summary class="font-semibold">Is my call secure?</summary>
+          <p class="mt-2 text-sm">All calls are routed through encrypted lines to keep your communication private.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 text-center text-gray-400 text-xs sm:text-sm bg-gray-900">
+    © 2025 Onchain — All Rights Reserved
+  </footer>
+
+  <!-- Hotline Ring Icon -->
+  <div class="hotline-phone-ring-wrap" onclick="window.location.href='tel:+12027805987'">
+    <div class="hotline-phone-ring">
+      <div class="hotline-phone-ring-circle"></div>
+      <div class="hotline-phone-ring-circle-fill"></div>
+      <div class="hotline-phone-ring-img-circle">📞</div>
+    </div>
+    <div class="hotline-bar">
+      <a href="tel:+12027805987">Call +1(202) 780-5987</a>
+    </div>
+  </div>
+
+  <!-- Hotline Custom Styles -->
+  <style>
+    .hotline-phone-ring-wrap {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+        user-select: none;
+        cursor: pointer;
+    }
+    .hotline-phone-ring {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        animation: ring 1.5s infinite;
+        transform-origin: center center;
+        flex-shrink: 0;
+    }
+    .hotline-phone-ring-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        border: 3px solid #FF6A00;
+        border-radius: 50%;
+        animation: pulse-ring 1.5s infinite;
+        box-sizing: border-box;
+    }
+    .hotline-phone-ring-circle-fill {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 46px;
+        height: 46px;
+        background-color: #FF6A00;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+    }
+    .hotline-phone-ring-img-circle {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        user-select: none;
+        pointer-events: none;
+    }
+    .hotline-bar {
+        background-color: #FF6A00;
+        border-radius: 50px;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        white-space: nowrap;
+        box-shadow: 0 4px 10px rgba(255, 106, 0, 0.6);
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+    .hotline-bar:hover {
+        background-color: #e65c00;
+    }
+    .hotline-bar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+    @keyframes ring {
+        0% { transform: rotate(0); }
+        1% { transform: rotate(15deg); }
+        3% { transform: rotate(-15deg); }
+        5% { transform: rotate(15deg); }
+        7% { transform: rotate(-15deg); }
+        9% { transform: rotate(0); }
+        100% { transform: rotate(0); }
+    }
+    @keyframes pulse-ring {
+        0% {
+            transform: scale(0.9);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+  </style>
+<!-- begin code v 7.0 -->
+<span id="wts2206156"></span>
+<script>var wts=document.createElement('script');wts.async=true;
+wts.src='https://app.ardalio.com/wts7.js';document.head.appendChild(wts);
+wts.onload = function(){ wtsl7(2206156,4); };
+</script><noscript><img src="https://app.ardalio.com/7/4/2206156.png"></noscript>
+<!-- end code v 7.0 -->
+
+</body>
+</html>
